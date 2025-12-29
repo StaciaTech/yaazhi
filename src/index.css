@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,7 +6,7 @@
 @layer base {
   :root {
     /* Yaazhi Vibrant Chozha-Inspired Color Palette */
-    --background: 40 35% 97%;
+    --background: 0 0% 0%;
     --foreground: 15 20% 12%;
 
     --card: 40 30% 95%;

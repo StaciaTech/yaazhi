@@ -1,63 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    /* Yaazhi Chozha-Inspired Color Palette */
-    --background: 35 30% 96%;
-    --foreground: 20 15% 15%;
+    /* Yaazhi Vibrant Chozha-Inspired Color Palette */
+    --background: 40 35% 97%;
+    --foreground: 15 20% 12%;
 
-    --card: 35 25% 94%;
-    --card-foreground: 20 15% 15%;
+    --card: 40 30% 95%;
+    --card-foreground: 15 20% 12%;
 
-    --popover: 35 30% 96%;
-    --popover-foreground: 20 15% 15%;
+    --popover: 40 35% 97%;
+    --popover-foreground: 15 20% 12%;
 
-    /* Deep Maroon Primary */
-    --primary: 350 45% 25%;
-    --primary-foreground: 35 30% 96%;
+    /* Rich Crimson Primary */
+    --primary: 348 65% 32%;
+    --primary-foreground: 40 35% 97%;
 
-    /* Warm Stone Secondary */
-    --secondary: 30 20% 88%;
-    --secondary-foreground: 20 15% 20%;
+    /* Warm Cream Secondary */
+    --secondary: 38 35% 90%;
+    --secondary-foreground: 15 20% 15%;
 
-    /* Muted Parchment */
-    --muted: 35 20% 90%;
-    --muted-foreground: 20 10% 45%;
+    /* Soft Ivory Muted */
+    --muted: 40 25% 92%;
+    --muted-foreground: 20 12% 40%;
 
-    /* Antique Gold Accent */
-    --accent: 38 55% 45%;
-    --accent-foreground: 35 30% 96%;
+    /* Vibrant Gold Accent */
+    --accent: 42 75% 50%;
+    --accent-foreground: 15 20% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 30 15% 85%;
-    --input: 30 15% 85%;
-    --ring: 350 45% 25%;
+    --border: 35 20% 85%;
+    --input: 35 20% 85%;
+    --ring: 348 65% 32%;
 
     --radius: 1rem;
 
-    /* Custom Yaazhi Tokens */
-    --bronze: 30 50% 40%;
-    --gold: 38 60% 50%;
-    --deep-maroon: 350 50% 20%;
-    --warm-charcoal: 20 10% 25%;
-    --parchment: 35 35% 94%;
-    --stone: 30 15% 80%;
+    /* Custom Yaazhi Tokens - More Vibrant */
+    --bronze: 28 60% 42%;
+    --gold: 42 80% 55%;
+    --deep-maroon: 348 70% 25%;
+    --warm-charcoal: 15 15% 20%;
+    --parchment: 40 40% 95%;
+    --stone: 35 20% 78%;
+    --crimson: 348 75% 38%;
+    --amber: 38 85% 52%;
+    --burgundy: 340 55% 28%;
 
-    /* Gradients */
-    --gradient-heading: linear-gradient(135deg, hsl(350, 45%, 30%) 0%, hsl(30, 50%, 45%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(38, 55%, 45%) 0%, hsl(30, 50%, 55%) 100%);
-    --gradient-dark: linear-gradient(180deg, hsl(20, 15%, 10%) 0%, hsl(20, 20%, 15%) 100%);
+    /* Vibrant Gradients */
+    --gradient-heading: linear-gradient(135deg, hsl(348, 70%, 35%) 0%, hsl(42, 80%, 48%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(42, 85%, 50%) 0%, hsl(28, 70%, 55%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(15, 20%, 8%) 0%, hsl(15, 25%, 12%) 100%);
+    --gradient-vibrant: linear-gradient(135deg, hsl(348, 65%, 35%) 0%, hsl(348, 50%, 45%) 50%, hsl(42, 70%, 50%) 100%);
 
-    /* Shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(20 15% 15% / 0.08);
-    --shadow-card: 0 8px 30px -8px hsl(20 15% 15% / 0.12);
-    --shadow-elevated: 0 20px 50px -15px hsl(20 15% 15% / 0.15);
+    /* Enhanced Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(15 20% 10% / 0.1);
+    --shadow-card: 0 8px 30px -8px hsl(15 20% 10% / 0.15);
+    --shadow-elevated: 0 20px 50px -15px hsl(15 20% 10% / 0.2);
+    --shadow-glow: 0 0 30px hsl(42 80% 55% / 0.3);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -70,33 +73,33 @@
   }
 
   .dark {
-    --background: 20 20% 8%;
-    --foreground: 35 25% 92%;
+    --background: 15 25% 6%;
+    --foreground: 40 30% 94%;
 
-    --card: 20 18% 12%;
-    --card-foreground: 35 25% 92%;
+    --card: 15 22% 10%;
+    --card-foreground: 40 30% 94%;
 
-    --popover: 20 20% 8%;
-    --popover-foreground: 35 25% 92%;
+    --popover: 15 25% 6%;
+    --popover-foreground: 40 30% 94%;
 
-    --primary: 38 55% 50%;
-    --primary-foreground: 20 20% 8%;
+    --primary: 42 75% 55%;
+    --primary-foreground: 15 25% 6%;
 
-    --secondary: 20 15% 18%;
-    --secondary-foreground: 35 25% 90%;
+    --secondary: 15 18% 15%;
+    --secondary-foreground: 40 30% 92%;
 
-    --muted: 20 15% 18%;
-    --muted-foreground: 30 15% 60%;
+    --muted: 15 18% 15%;
+    --muted-foreground: 35 18% 55%;
 
-    --accent: 350 40% 45%;
-    --accent-foreground: 35 25% 92%;
+    --accent: 348 55% 50%;
+    --accent-foreground: 40 30% 94%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 20 15% 20%;
-    --input: 20 15% 20%;
-    --ring: 38 55% 50%;
+    --border: 15 18% 18%;
+    --input: 15 18% 18%;
+    --ring: 42 75% 55%;
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -120,7 +123,8 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Italiana', serif;
+    letter-spacing: 0.02em;
   }
 }
 
@@ -139,42 +143,134 @@
     background-clip: text;
   }
 
+  .heading-vibrant {
+    background: var(--gradient-vibrant);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
   .card-yaazhi {
     @apply rounded-2xl bg-card shadow-[var(--shadow-card)] transition-all duration-500;
   }
 
   .card-yaazhi:hover {
     @apply shadow-[var(--shadow-elevated)];
-    transform: translateY(-4px);
+    transform: translateY(-6px);
   }
 
   .btn-primary-yaazhi {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-3 text-sm font-medium text-primary-foreground transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-3 text-sm font-medium text-primary-foreground transition-all duration-300 relative overflow-hidden;
+  }
+
+  .btn-primary-yaazhi::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent 0%, hsl(0 0% 100% / 0.15) 50%, transparent 100%);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+  }
+
+  .btn-primary-yaazhi:hover::before {
+    transform: translateX(100%);
   }
 
   .btn-primary-yaazhi:hover {
     @apply shadow-[var(--shadow-card)];
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.02);
   }
 
   .btn-accent-yaazhi {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-sm font-medium transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-sm font-medium transition-all duration-300 relative overflow-hidden;
     background: var(--gradient-gold);
-    color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+
+  .btn-accent-yaazhi::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent 0%, hsl(0 0% 100% / 0.25) 50%, transparent 100%);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+  }
+
+  .btn-accent-yaazhi:hover::before {
+    transform: translateX(100%);
   }
 
   .btn-accent-yaazhi:hover {
-    @apply shadow-[var(--shadow-card)];
-    transform: translateY(-2px);
+    @apply shadow-[var(--shadow-glow)];
+    transform: translateY(-3px) scale(1.02);
   }
 
   .tagline {
-    font-family: 'Cormorant Garamond', serif;
-    @apply italic;
+    font-family: 'Dancing Script', cursive;
+    @apply font-medium;
+  }
+
+  .cursive-accent {
+    font-family: 'Caveat', cursive;
   }
 
   .section-padding {
     @apply px-6 py-20 md:px-12 lg:px-24 lg:py-28;
+  }
+
+  /* Hover glow effect */
+  .hover-glow {
+    @apply transition-all duration-500;
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 30px hsl(var(--accent) / 0.4);
+  }
+
+  /* Magnetic button effect */
+  .magnetic-hover {
+    @apply transition-transform duration-300 ease-out;
+  }
+
+  .magnetic-hover:hover {
+    transform: translateY(-4px);
+  }
+
+  /* Underline animation */
+  .link-underline {
+    @apply relative;
+  }
+
+  .link-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-accent scale-x-0 origin-right transition-transform duration-300;
+  }
+
+  .link-underline:hover::after {
+    @apply scale-x-100 origin-left;
+  }
+
+  /* Pulse glow animation */
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+
+  /* Floating animation */
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Shine effect */
+  .shine {
+    @apply relative overflow-hidden;
+  }
+
+  .shine::after {
+    content: '';
+    @apply absolute inset-0;
+    background: linear-gradient(90deg, transparent, hsl(0 0% 100% / 0.2), transparent);
+    transform: translateX(-100%);
+    animation: shine 3s ease-in-out infinite;
   }
 }
 
@@ -189,6 +285,14 @@
 
   .animate-slide-in {
     animation: slideIn 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+
+  .animate-bounce-subtle {
+    animation: bounceSubtle 2s ease-in-out infinite;
   }
 
   @keyframes fadeUp {
@@ -222,9 +326,84 @@
     }
   }
 
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes bounceSubtle {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(var(--accent) / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(var(--accent) / 0.6);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes shine {
+    0% {
+      transform: translateX(-100%);
+    }
+    50%, 100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes marquee-reverse {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 40s linear infinite;
+  }
+
+  .animate-marquee-reverse {
+    animation: marquee-reverse 45s linear infinite;
+  }
+
   .delay-100 { animation-delay: 100ms; }
   .delay-200 { animation-delay: 200ms; }
   .delay-300 { animation-delay: 300ms; }
   .delay-400 { animation-delay: 400ms; }
   .delay-500 { animation-delay: 500ms; }
+  .delay-600 { animation-delay: 600ms; }
+  .delay-700 { animation-delay: 700ms; }
 }

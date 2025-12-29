@@ -22,10 +22,11 @@ const teamMembers = [
 
 export const TeamPreview = () => {
   return (
-    <section className="section-padding bg-secondary/50">
+    <section className="section-padding bg-secondary/40">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl font-semibold heading-gradient mb-4">
+          <span className="font-cursive text-2xl text-accent mb-2 block">The Creative Force</span>
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal heading-gradient mb-4">
             Core Team
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto">
@@ -33,7 +34,7 @@ export const TeamPreview = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {teamMembers.map((member, index) => (
             <div
               key={member.name}
@@ -43,17 +44,18 @@ export const TeamPreview = () => {
                 animationFillMode: "forwards",
               }}
             >
-              <div className="relative mb-6 mx-auto w-48 h-48 rounded-2xl overflow-hidden shadow-card">
+              <div className="relative mb-6 mx-auto w-52 h-52 rounded-2xl overflow-hidden shadow-card group-hover:shadow-glow transition-all duration-500">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
-              <h3 className="font-serif text-xl font-medium text-foreground mb-1">
+              <h3 className="font-serif text-2xl font-normal text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
                 {member.name}
               </h3>
-              <p className="text-sm text-muted-foreground font-accent italic">
+              <p className="text-sm text-muted-foreground font-cursive text-lg">
                 {member.role}
               </p>
             </div>

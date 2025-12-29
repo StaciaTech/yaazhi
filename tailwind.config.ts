@@ -63,11 +63,16 @@ export default {
         "warm-charcoal": "hsl(var(--warm-charcoal))",
         parchment: "hsl(var(--parchment))",
         stone: "hsl(var(--stone))",
+        crimson: "hsl(var(--crimson))",
+        amber: "hsl(var(--amber))",
+        burgundy: "hsl(var(--burgundy))",
       },
       fontFamily: {
-        serif: ["Playfair Display", "serif"],
+        serif: ["Italiana", "serif"],
         sans: ["DM Sans", "sans-serif"],
         accent: ["Cormorant Garamond", "serif"],
+        cursive: ["Dancing Script", "cursive"],
+        handwritten: ["Caveat", "cursive"],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,6 +85,7 @@ export default {
         soft: "var(--shadow-soft)",
         card: "var(--shadow-card)",
         elevated: "var(--shadow-elevated)",
+        glow: "var(--shadow-glow)",
       },
       keyframes: {
         "accordion-down": {
@@ -102,9 +108,25 @@ export default {
           from: { opacity: "0", transform: "translateX(-20px)" },
           to: { opacity: "1", transform: "translateX(0)" },
         },
+        "scale-in": {
+          from: { opacity: "0", transform: "scale(0.9)" },
+          to: { opacity: "1", transform: "scale(1)" },
+        },
         "carousel-slide": {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-50%)" },
+        },
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        "marquee-reverse": {
+          "0%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0)" },
+        },
+        shimmer: {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
         },
       },
       animation: {
@@ -113,7 +135,11 @@ export default {
         "fade-up": "fade-up 0.8s ease-out forwards",
         "fade-in": "fade-in 0.6s ease-out forwards",
         "slide-in": "slide-in 0.6s ease-out forwards",
+        "scale-in": "scale-in 0.5s ease-out forwards",
         "carousel-slide": "carousel-slide 30s linear infinite",
+        marquee: "marquee 40s linear infinite",
+        "marquee-reverse": "marquee-reverse 45s linear infinite",
+        shimmer: "shimmer 2s linear infinite",
       },
     },
   },

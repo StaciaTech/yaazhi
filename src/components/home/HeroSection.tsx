@@ -1,27 +1,39 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-concert.jpg";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
           src={heroImage}
           alt="Yaazhi performing live on stage"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover scale-105 animate-[scale-in_1.5s_ease-out_forwards]"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-foreground/60 via-foreground/40 to-foreground/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/50 to-foreground/85" />
       </div>
 
+      {/* Animated decorative elements */}
+      <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-accent/10 blur-3xl animate-pulse" />
+      <div className="absolute bottom-32 right-10 w-40 h-40 rounded-full bg-primary/10 blur-3xl animate-pulse delay-500" />
+
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <h1
-          className="font-serif text-5xl md:text-7xl lg:text-8xl font-semibold text-background mb-6 opacity-0 animate-fade-up"
-          style={{ animationDelay: "200ms", animationFillMode: "forwards" }}
+      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+        <span
+          className="font-cursive text-3xl md:text-4xl text-accent inline-block mb-4 opacity-0 animate-fade-up"
+          style={{ animationDelay: "100ms", animationFillMode: "forwards" }}
         >
-          Yaazhi
+          When Culture Takes a Modern Voice
+        </span>
+        <h1
+          className="font-serif text-6xl md:text-8xl lg:text-9xl font-normal tracking-wide mb-6 opacity-0 animate-fade-up"
+          style={{ animationDelay: "250ms", animationFillMode: "forwards" }}
+        >
+          <span className="text-background">Y</span>
+          <span className="text-accent">aa</span>
+          <span className="text-background">zhi</span>
         </h1>
         <p
           className="font-accent italic text-xl md:text-2xl lg:text-3xl text-background/90 mb-4 opacity-0 animate-fade-up"
@@ -30,14 +42,8 @@ export const HeroSection = () => {
           The Indian Fusion Collective
         </p>
         <p
-          className="font-accent text-lg md:text-xl text-background/70 mb-8 opacity-0 animate-fade-up"
-          style={{ animationDelay: "500ms", animationFillMode: "forwards" }}
-        >
-          When Culture Takes a Modern Voice
-        </p>
-        <p
-          className="text-background/80 text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed opacity-0 animate-fade-up"
-          style={{ animationDelay: "600ms", animationFillMode: "forwards" }}
+          className="text-background/75 text-base md:text-lg max-w-2xl mx-auto mb-12 leading-relaxed opacity-0 animate-fade-up"
+          style={{ animationDelay: "550ms", animationFillMode: "forwards" }}
         >
           Chennai-based Indian fusion collective blending classical roots with
           contemporary global soundscapes.
@@ -46,17 +52,22 @@ export const HeroSection = () => {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-fade-up"
           style={{ animationDelay: "700ms", animationFillMode: "forwards" }}
         >
-          <Link to="/testimonials" className="btn-accent-yaazhi">
+          <Link to="/testimonials" className="btn-accent-yaazhi group">
             Enquire Here
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
           </Link>
           <Link
             to="/about"
-            className="inline-flex items-center gap-2 px-8 py-3 rounded-full border border-background/30 text-background text-sm font-medium hover:bg-background/10 transition-all duration-300"
+            className="inline-flex items-center gap-2 px-8 py-3 rounded-full border-2 border-background/40 text-background text-sm font-medium hover:bg-background/15 hover:border-background/60 transition-all duration-300 hover:scale-105"
           >
             About Us
           </Link>
         </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 animate-fade-up" style={{ animationDelay: "1000ms", animationFillMode: "forwards" }}>
+        <ChevronDown className="w-8 h-8 text-background/60 animate-bounce-subtle" />
       </div>
     </section>
   );

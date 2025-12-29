@@ -4,7 +4,7 @@ import { TeamPreview } from "@/components/home/TeamPreview";
 import { AboutPreview } from "@/components/home/AboutPreview";
 import { GalleryPreview } from "@/components/home/GalleryPreview";
 import { FeaturedVideos } from "@/components/home/FeaturedVideos";
-import { TestimonialsCarousel } from "@/components/home/TestimonialsCarousel";
+import { TestimonialsMarquee } from "@/components/home/TestimonialsMarquee";
 import { ContactSection } from "@/components/home/ContactSection";
 
 const Index = () => {
@@ -15,7 +15,7 @@ const Index = () => {
       <AboutPreview />
       <GalleryPreview />
       <FeaturedVideos />
-      <TestimonialsCarousel />
+      <TestimonialsMarquee />
       <ContactSection />
     </Layout>
   );

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Youtube, Phone, Mail, Heart } from "lucide-react";
+import BuiltIcon from "../../assets/BuiltIcon.svg";
 
 export const Footer = () => {
   return (
@@ -97,17 +98,31 @@ export const Footer = () => {
         <div className="mt-12 pt-8 border-t border-border text-center">
           <p className="text-sm text-foreground/50 flex items-center justify-center gap-1 flex-wrap">
             © {new Date().getFullYear()} Yaazhi – The Indian Fusion Collective.
-            Made with
-            <Heart className="w-4 h-4 text-accent fill-accent animate-pulse mx-1" />
-            for music by{" "}
+            <a
+              href="http://builtbystacia.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-red-500 hover:underline ml-1 flex"
+            >
+              <img
+                src={BuiltIcon}
+                alt="Built by Stacia"
+                className="w-[20px] h-[20px]"
+              />{" "}
+              Built
+            </a>{" "}
+            by{" "}
             <a
               href="https://www.staciacorp.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-accent hover:underline ml-1"
+              className="text-accent hover:underline "
             >
-              Stacia Corp
-            </a>
+              Stacia
+            </a>{" "}
+            with
+            <Heart className="w-4 h-4 text-accent fill-accent animate-pulse mx-1" />
+            for music{" "}
           </p>
         </div>
       </div>

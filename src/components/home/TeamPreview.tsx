@@ -22,7 +22,7 @@ const teamMembers = [
 
 export const TeamPreview = () => {
   return (
-    <section className="section-padding bg-background">
+    <section id="core-team-section" className="section-padding bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <span className="font-cursive text-2xl text-accent mb-2 block">

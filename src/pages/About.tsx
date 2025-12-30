@@ -5,49 +5,30 @@ import team1 from "@/assets/team-1.jpg";
 import team2 from "@/assets/team-2.jpg";
 import team3 from "@/assets/team-3.jpg";
 import heroImage from "@/assets/hero-concert.jpg";
-
-const teamMembers = [
-  {
-    name: "Kiran Kashyap",
-    role: "Founder | Artistic Director | Multi-Instrumentalist",
-    image: team3,
-  },
-  {
-    name: "C. S. Lakshmi",
-    role: "Co-Founder | Executive Producer | Lead Vocalist",
-    image: team1,
-  },
-  {
-    name: "Harinee Muraleedharan",
-    role: "Vocalist | Executive Management – COAR",
-    image: team2,
-  },
-  {
-    name: "Balasubramaniyam",
-    role: "Keyboardist | Supporting Vocalist | Creative Director",
-    image: team3,
-  },
-];
-
-const services = [
-  "Live Concert Performances",
-  "Wedding Receptions & Muhurtham Concerts",
-  "Corporate Shows & Workshops",
-  "Festivals & Cultural Events",
-  "Restaurant & Lounge Performances",
-];
-
+const teamMembers = [{
+  name: "Kiran Kashyap",
+  role: "Founder | Artistic Director | Multi-Instrumentalist",
+  image: team3
+}, {
+  name: "C. S. Lakshmi",
+  role: "Co-Founder | Executive Producer | Lead Vocalist",
+  image: team1
+}, {
+  name: "Harinee Muraleedharan",
+  role: "Vocalist | Executive Management – COAR",
+  image: team2
+}, {
+  name: "Balasubramaniyam",
+  role: "Keyboardist | Supporting Vocalist | Creative Director",
+  image: team3
+}];
+const services = ["Live Concert Performances", "Wedding Receptions & Muhurtham Concerts", "Corporate Shows & Workshops", "Festivals & Cultural Events", "Restaurant & Lounge Performances"];
 const About = () => {
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src={heroImage}
-            alt="Yaazhi performing"
-            className="w-full h-full object-cover"
-          />
+          <img src={heroImage} alt="Yaazhi performing" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/50 to-background" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
@@ -85,7 +66,7 @@ const About = () => {
       </section>
 
       {/* Origin */}
-      <section className="section-padding bg-secondary/50">
+      <section className="section-padding bg-black">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-serif text-3xl md:text-4xl font-semibold heading-gradient mb-8">
             Origin
@@ -107,15 +88,10 @@ const About = () => {
             Services
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {services.map((service) => (
-              <div
-                key={service}
-                className="flex items-center gap-4 p-4 rounded-xl bg-secondary/50"
-              >
+            {services.map(service => <div key={service} className="flex items-center gap-4 p-4 rounded-xl bg-secondary/50">
                 <div className="w-2 h-2 rounded-full bg-accent" />
                 <span className="text-foreground">{service}</span>
-              </div>
-            ))}
+              </div>)}
           </div>
           <p className="mt-6 text-muted-foreground font-accent italic">
             Each experience is curated—not performed generically.
@@ -124,27 +100,18 @@ const About = () => {
       </section>
 
       {/* Team */}
-      <section className="section-padding bg-secondary/50">
+      <section className="section-padding bg-black">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-serif text-3xl md:text-4xl font-semibold heading-gradient mb-12 text-center">
             Meet the Team
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <div
-                key={member.name}
-                className="text-center opacity-0 animate-fade-up"
-                style={{
-                  animationDelay: `${(index + 1) * 100}ms`,
-                  animationFillMode: "forwards",
-                }}
-              >
+            {teamMembers.map((member, index) => <div key={member.name} className="text-center opacity-0 animate-fade-up" style={{
+            animationDelay: `${(index + 1) * 100}ms`,
+            animationFillMode: "forwards"
+          }}>
                 <div className="relative mb-4 mx-auto w-40 h-40 rounded-2xl overflow-hidden shadow-card">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                  />
+                  <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
                 </div>
                 <h3 className="font-serif text-lg font-medium text-foreground mb-1">
                   {member.name}
@@ -152,8 +119,7 @@ const About = () => {
                 <p className="text-sm text-muted-foreground font-accent italic">
                   {member.role}
                 </p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -173,8 +139,6 @@ const About = () => {
           </Link>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default About;

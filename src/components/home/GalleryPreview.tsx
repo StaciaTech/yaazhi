@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Camera } from "lucide-react";
 import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
+import gallery2 from "@/assets/gallery/gall-1.jpg";
 import heroImage from "@/assets/hero-concert.jpg";
 
 const galleryImages = [

@@ -5,111 +5,75 @@
 
 @layer base {
   :root {
-    /* Yaazhi Vibrant Chozha-Inspired Color Palette */
-    --background: 0 0% 0%;
-    --foreground: 15 20% 12%;
+    /* Dark Theme - Yaazhi */
+    --background: 0 0% 4%;
+    --foreground: 45 20% 90%;
 
-    --card: 40 30% 95%;
-    --card-foreground: 15 20% 12%;
+    --card: 0 0% 8%;
+    --card-foreground: 45 20% 90%;
 
-    --popover: 40 35% 97%;
-    --popover-foreground: 15 20% 12%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 45 20% 90%;
 
-    /* Rich Crimson Primary */
-    --primary: 348 65% 32%;
-    --primary-foreground: 40 35% 97%;
+    /* Rich Gold Primary */
+    --primary: 42 75% 50%;
+    --primary-foreground: 0 0% 4%;
 
-    /* Warm Cream Secondary */
-    --secondary: 38 35% 90%;
-    --secondary-foreground: 15 20% 15%;
+    /* Dark Secondary */
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 45 20% 88%;
 
-    /* Soft Ivory Muted */
-    --muted: 40 25% 92%;
-    --muted-foreground: 20 12% 40%;
+    /* Muted for dark theme */
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
 
     /* Vibrant Gold Accent */
-    --accent: 42 75% 50%;
-    --accent-foreground: 15 20% 10%;
+    --accent: 42 80% 55%;
+    --accent-foreground: 0 0% 4%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 35 20% 85%;
-    --input: 35 20% 85%;
-    --ring: 348 65% 32%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 42 75% 50%;
 
     --radius: 1rem;
 
-    /* Custom Yaazhi Tokens - More Vibrant */
+    /* Custom Yaazhi Tokens - Dark Theme */
     --bronze: 28 60% 42%;
     --gold: 42 80% 55%;
     --deep-maroon: 348 70% 25%;
-    --warm-charcoal: 15 15% 20%;
-    --parchment: 40 40% 95%;
-    --stone: 35 20% 78%;
+    --warm-charcoal: 0 0% 12%;
+    --parchment: 45 20% 90%;
+    --stone: 45 15% 85%;
     --crimson: 348 75% 38%;
     --amber: 38 85% 52%;
     --burgundy: 340 55% 28%;
+    --nav-inactive: 0 0% 45%;
 
     /* Vibrant Gradients */
-    --gradient-heading: linear-gradient(135deg, hsl(348, 70%, 35%) 0%, hsl(42, 80%, 48%) 100%);
+    --gradient-heading: linear-gradient(135deg, hsl(42, 80%, 50%) 0%, hsl(38, 85%, 60%) 100%);
     --gradient-gold: linear-gradient(135deg, hsl(42, 85%, 50%) 0%, hsl(28, 70%, 55%) 100%);
-    --gradient-dark: linear-gradient(180deg, hsl(15, 20%, 8%) 0%, hsl(15, 25%, 12%) 100%);
-    --gradient-vibrant: linear-gradient(135deg, hsl(348, 65%, 35%) 0%, hsl(348, 50%, 45%) 50%, hsl(42, 70%, 50%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(0, 0%, 4%) 0%, hsl(0, 0%, 8%) 100%);
+    --gradient-vibrant: linear-gradient(135deg, hsl(42, 80%, 50%) 0%, hsl(38, 75%, 55%) 50%, hsl(28, 70%, 50%) 100%);
+    --gradient-golden-glow: linear-gradient(135deg, hsl(42, 85%, 45%) 0%, hsl(38, 80%, 55%) 50%, hsl(28, 75%, 50%) 100%);
 
-    /* Enhanced Shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(15 20% 10% / 0.1);
-    --shadow-card: 0 8px 30px -8px hsl(15 20% 10% / 0.15);
-    --shadow-elevated: 0 20px 50px -15px hsl(15 20% 10% / 0.2);
-    --shadow-glow: 0 0 30px hsl(42 80% 55% / 0.3);
+    /* Enhanced Shadows for dark theme */
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.4);
+    --shadow-card: 0 8px 30px -8px hsl(0 0% 0% / 0.5);
+    --shadow-elevated: 0 20px 50px -15px hsl(0 0% 0% / 0.6);
+    --shadow-glow: 0 0 30px hsl(42 80% 55% / 0.4);
+    --shadow-golden: 0 0 40px hsl(42 80% 50% / 0.5);
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 15 25% 6%;
-    --foreground: 40 30% 94%;
-
-    --card: 15 22% 10%;
-    --card-foreground: 40 30% 94%;
-
-    --popover: 15 25% 6%;
-    --popover-foreground: 40 30% 94%;
-
-    --primary: 42 75% 55%;
-    --primary-foreground: 15 25% 6%;
-
-    --secondary: 15 18% 15%;
-    --secondary-foreground: 40 30% 92%;
-
-    --muted: 15 18% 15%;
-    --muted-foreground: 35 18% 55%;
-
-    --accent: 348 55% 50%;
-    --accent-foreground: 40 30% 94%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 15 18% 18%;
-    --input: 15 18% 18%;
-    --ring: 42 75% 55%;
-
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 45 20% 90%;
+    --sidebar-primary: 42 75% 50%;
+    --sidebar-primary-foreground: 0 0% 4%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 45 20% 90%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 42 75% 50%;
   }
 }
 
@@ -392,12 +356,45 @@
     }
   }
 
+  @keyframes golden-pulse {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(42 80% 50% / 0.3), 0 0 40px hsl(42 80% 50% / 0.2);
+    }
+    50% {
+      box-shadow: 0 0 30px hsl(42 80% 50% / 0.5), 0 0 60px hsl(42 80% 50% / 0.3);
+    }
+  }
+
+  @keyframes slide-up-overlay {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
   .animate-marquee {
     animation: marquee 40s linear infinite;
   }
 
   .animate-marquee-reverse {
     animation: marquee-reverse 45s linear infinite;
+  }
+
+  .animate-golden-pulse {
+    animation: golden-pulse 3s ease-in-out infinite;
+  }
+
+  .golden-glow-card {
+    background: linear-gradient(135deg, hsl(42 85% 45% / 0.15) 0%, hsl(38 80% 50% / 0.1) 100%);
+    border: 1px solid hsl(42 80% 50% / 0.3);
+    box-shadow: 0 0 30px hsl(42 80% 50% / 0.2), inset 0 0 20px hsl(42 80% 50% / 0.05);
+  }
+
+  .golden-glow-card:hover {
+    box-shadow: 0 0 40px hsl(42 80% 50% / 0.4), inset 0 0 30px hsl(42 80% 50% / 0.1);
+    border-color: hsl(42 80% 55% / 0.5);
   }
 
   .delay-100 { animation-delay: 100ms; }

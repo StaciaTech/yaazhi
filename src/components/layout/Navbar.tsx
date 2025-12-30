@@ -26,7 +26,7 @@ export const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled 
-        ? "bg-background/98 backdrop-blur-md shadow-soft border-b border-border" 
+        ? "bg-background/98 backdrop-blur-md shadow-soft" 
         : "bg-transparent"
     }`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -34,7 +34,7 @@ export const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
             <span className={`font-serif text-3xl font-normal transition-all duration-300 ${
-              isScrolled ? "heading-gradient" : "text-background"
+              isScrolled ? "heading-gradient" : "text-parchment"
             }`}>
               <span className="group-hover:text-accent transition-colors duration-300">Y</span>aazhi
             </span>
@@ -48,8 +48,8 @@ export const Navbar = () => {
                 to={link.path}
                 className={`text-sm font-medium transition-all duration-300 link-underline ${
                   location.pathname === link.path
-                    ? isScrolled ? "text-primary" : "text-accent"
-                    : isScrolled ? "text-muted-foreground hover:text-primary" : "text-background/80 hover:text-background"
+                    ? "text-accent"
+                    : "text-[#8a8a8a] hover:text-accent"
                 }`}
               >
                 {link.name}
@@ -61,9 +61,7 @@ export const Navbar = () => {
           <div className="hidden lg:flex items-center gap-6">
             <a
               href="tel:+919840549760"
-              className={`flex items-center gap-2 text-sm transition-all duration-300 hover:scale-105 ${
-                isScrolled ? "text-muted-foreground hover:text-primary" : "text-background/80 hover:text-background"
-              }`}
+              className="flex items-center gap-2 text-sm transition-all duration-300 hover:scale-105 text-[#8a8a8a] hover:text-accent"
             >
               <Phone className="w-4 h-4" />
               <span>98405 49760</span>
@@ -76,9 +74,7 @@ export const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`md:hidden p-2 transition-colors duration-300 ${
-              isScrolled ? "text-foreground" : "text-background"
-            }`}
+            className="md:hidden p-2 transition-colors duration-300 text-foreground"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>

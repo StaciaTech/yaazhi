@@ -48,7 +48,11 @@ const About = () => {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImage} alt="Yaazhi performing" className="w-full h-full object-cover" />
+          <img
+            src={heroImage}
+            alt="Yaazhi performing"
+            className="w-full h-full object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
@@ -105,7 +109,9 @@ const About = () => {
       <section className="section-padding bg-background">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <span className="font-cursive text-2xl text-accent mb-2 block">What We Offer</span>
+            <span className="font-cursive text-2xl text-accent mb-2 block">
+              What We Offer
+            </span>
             <h2 className="font-serif text-3xl md:text-4xl font-semibold heading-gradient mb-4">
               Services
             </h2>
@@ -147,22 +153,24 @@ const About = () => {
       <section className="section-padding bg-card">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <span className="font-cursive text-2xl text-accent mb-2 block">The Creative Force</span>
+            <span className="font-cursive text-2xl text-accent mb-2 block">
+              The Creative Force
+            </span>
             <h2 className="font-serif text-3xl md:text-4xl font-semibold heading-gradient">
               Meet the Team
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
             {teamMembers.map((member, index) => (
               <div
                 key={member.name}
                 className="group text-center opacity-0 animate-fade-up"
                 style={{
-                  animationDelay: `${(index + 1) * 100}ms`,
+                  animationDelay: `${(index + 1) * 150}ms`,
                   animationFillMode: "forwards",
                 }}
               >
-                <div className="relative mb-4 mx-auto w-40 h-40 rounded-2xl overflow-hidden shadow-card group-hover:shadow-glow transition-all duration-500">
+                <div className="relative mb-6 mx-auto w-52 h-52 rounded-2xl overflow-hidden shadow-card group-hover:shadow-glow transition-all duration-500">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -170,10 +178,10 @@ const About = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
-                <h3 className="font-serif text-lg font-medium text-accent mb-1 group-hover:text-primary transition-colors duration-300">
+                <h3 className="font-serif text-2xl font-normal text-accent mb-2 group-hover:text-primary transition-colors duration-300">
                   {member.name}
                 </h3>
-                <p className="text-sm text-foreground/60 font-accent italic">
+                <p className="text-sm text-foreground/70 font-cursive text-lg">
                   {member.role}
                 </p>
               </div>

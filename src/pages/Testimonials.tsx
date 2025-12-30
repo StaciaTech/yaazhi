@@ -1,5 +1,14 @@
+import { ContactSection } from "@/components/home/ContactSection";
 import { Layout } from "@/components/layout/Layout";
-import { Quote, Phone, Mail, Instagram, Youtube, ArrowRight, Send } from "lucide-react";
+import {
+  Quote,
+  Phone,
+  Mail,
+  Instagram,
+  Youtube,
+  ArrowRight,
+  Send,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 const testimonials = [
@@ -48,7 +57,15 @@ const testimonials = [
 const firstRow = testimonials.slice(0, 4);
 const secondRow = testimonials.slice(4);
 
-const TestimonialCard = ({ text, author, role }: { text: string; author: string; role: string }) => (
+const TestimonialCard = ({
+  text,
+  author,
+  role,
+}: {
+  text: string;
+  author: string;
+  role: string;
+}) => (
   <div className="flex-shrink-0 w-[380px] mx-3">
     <div className="rounded-2xl p-6 h-full bg-gradient-to-br from-amber/20 via-accent/15 to-gold/20 border border-accent/30 shadow-[0_0_30px_hsl(42_90%_50%/0.15)] hover:shadow-[0_0_50px_hsl(42_90%_50%/0.3)] transition-all duration-500">
       <Quote className="w-8 h-8 text-accent/50 mb-4" />
@@ -110,7 +127,7 @@ const Testimonials = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-br from-accent/10 via-card to-primary/10">
+      {/* <section className="section-padding bg-gradient-to-br from-accent/10 via-card to-primary/10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-5xl font-semibold heading-gradient mb-4">
             Let Yaazhi Soundtrack Your Next Event
@@ -128,7 +145,9 @@ const Testimonials = () => {
               <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
                 <Phone className="w-5 h-5 text-accent group-hover:text-background" />
               </div>
-              <span className="text-foreground group-hover:text-accent transition-colors">98405 49760</span>
+              <span className="text-foreground group-hover:text-accent transition-colors">
+                98405 49760
+              </span>
             </a>
             <a
               href="tel:+918754518388"
@@ -137,7 +156,9 @@ const Testimonials = () => {
               <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
                 <Phone className="w-5 h-5 text-accent group-hover:text-background" />
               </div>
-              <span className="text-foreground group-hover:text-accent transition-colors">87545 18388</span>
+              <span className="text-foreground group-hover:text-accent transition-colors">
+                87545 18388
+              </span>
             </a>
           </div>
 
@@ -148,7 +169,9 @@ const Testimonials = () => {
             <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
               <Mail className="w-5 h-5 text-accent group-hover:text-background" />
             </div>
-            <span className="text-foreground group-hover:text-accent transition-colors">yaazhitheband@gmail.com</span>
+            <span className="text-foreground group-hover:text-accent transition-colors">
+              yaazhitheband@gmail.com
+            </span>
           </a>
 
           <div className="flex items-center justify-center gap-6 mb-12">
@@ -178,7 +201,8 @@ const Testimonials = () => {
             <Send className="w-4 h-4" />
           </a>
         </div>
-      </section>
+      </section> */}
+      <ContactSection />
     </Layout>
   );
 };

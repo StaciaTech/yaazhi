@@ -28,15 +28,25 @@ export const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-serif text-xl font-normal mb-6 text-accent">Explore</h4>
+            <h4 className="font-serif text-xl font-normal mb-6 text-accent">
+              Explore
+            </h4>
             <div className="flex flex-col gap-4">
-              {["About Us", "Gallery", "News & Press", "Testimonials"].map((link) => (
+              {[
+                { name: "About Us", link: "/about" },
+                { name: "Gallery", link: "/gallery" },
+                { name: "News & Press", link: "/news" },
+                { name: "Testimonials", link: "/testimonials" },
+              ].map((link) => (
                 <Link
-                  key={link}
-                  to={`/${link.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`}
+                  key={link.name}
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}
+                  to={link.link}
                   className="text-sm text-foreground/60 hover:text-accent hover:translate-x-2 transition-all duration-300 inline-block"
                 >
-                  {link}
+                  {link.name}
                 </Link>
               ))}
             </div>
@@ -44,7 +54,9 @@ export const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-serif text-xl font-normal mb-6 text-accent">Contact</h4>
+            <h4 className="font-serif text-xl font-normal mb-6 text-accent">
+              Contact
+            </h4>
             <div className="flex flex-col gap-4">
               <a
                 href="tel:+919840549760"
@@ -84,7 +96,8 @@ export const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-border text-center">
           <p className="text-sm text-foreground/50 flex items-center justify-center gap-1 flex-wrap">
-            © {new Date().getFullYear()} Yaazhi – The Indian Fusion Collective. Made with
+            © {new Date().getFullYear()} Yaazhi – The Indian Fusion Collective.
+            Made with
             <Heart className="w-4 h-4 text-accent fill-accent animate-pulse mx-1" />
             for music by{" "}
             <a

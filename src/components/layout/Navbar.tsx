@@ -25,24 +25,29 @@ export const Navbar = () => {
 
   const scrollToContact = (e: React.MouseEvent) => {
     e.preventDefault();
-    const contactSection = document.getElementById('contact-section');
+    const contactSection = document.getElementById("contact-section");
     if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+      contactSection.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      isScrolled 
-        ? "bg-background/95 backdrop-blur-md shadow-card" 
-        : "bg-transparent"
-    }`}>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled
+          ? "bg-background/95 backdrop-blur-md shadow-card"
+          : "bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
             <span className="font-serif text-3xl font-normal text-accent transition-all duration-300">
-              <span className="group-hover:text-primary transition-colors duration-300">Y</span>aazhi
+              <span className="group-hover:text-primary transition-colors duration-300">
+                Y
+              </span>
+              aazhi
             </span>
           </Link>
 
@@ -51,6 +56,7 @@ export const Navbar = () => {
             {navLinks.map((link) => (
               <Link
                 key={link.path}
+                onClick={() => window.scrollTo(0, 0)}
                 to={link.path}
                 className={`text-sm font-medium transition-all duration-300 link-underline ${
                   location.pathname === link.path
@@ -72,8 +78,8 @@ export const Navbar = () => {
               <Phone className="w-4 h-4" />
               <span>98405 49760</span>
             </a>
-            <button 
-              onClick={scrollToContact} 
+            <button
+              onClick={scrollToContact}
               className="btn-accent-yaazhi text-sm"
             >
               Book Now

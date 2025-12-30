@@ -5,111 +5,112 @@
 
 @layer base {
   :root {
-    /* Yaazhi Vibrant Chozha-Inspired Color Palette */
-    --background: 0 0% 0%;
-    --foreground: 15 20% 12%;
+    /* Pitch Dark Theme - Yaazhi */
+    --background: 0 0% 2%;
+    --foreground: 45 20% 95%;
 
-    --card: 40 30% 95%;
-    --card-foreground: 15 20% 12%;
+    --card: 0 0% 6%;
+    --card-foreground: 45 20% 95%;
 
-    --popover: 40 35% 97%;
-    --popover-foreground: 15 20% 12%;
+    --popover: 0 0% 4%;
+    --popover-foreground: 45 20% 95%;
 
-    /* Rich Crimson Primary */
-    --primary: 348 65% 32%;
-    --primary-foreground: 40 35% 97%;
+    /* Vibrant Gold Primary */
+    --primary: 42 85% 55%;
+    --primary-foreground: 0 0% 2%;
 
-    /* Warm Cream Secondary */
-    --secondary: 38 35% 90%;
-    --secondary-foreground: 15 20% 15%;
+    /* Dark Secondary */
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 45 20% 90%;
 
-    /* Soft Ivory Muted */
-    --muted: 40 25% 92%;
-    --muted-foreground: 20 12% 40%;
+    /* Muted Dark */
+    --muted: 0 0% 12%;
+    --muted-foreground: 45 15% 60%;
 
     /* Vibrant Gold Accent */
-    --accent: 42 75% 50%;
-    --accent-foreground: 15 20% 10%;
+    --accent: 42 90% 50%;
+    --accent-foreground: 0 0% 2%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 35 20% 85%;
-    --input: 35 20% 85%;
-    --ring: 348 65% 32%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 42 85% 55%;
 
     --radius: 1rem;
 
-    /* Custom Yaazhi Tokens - More Vibrant */
+    /* Custom Yaazhi Tokens - Pitch Dark */
     --bronze: 28 60% 42%;
-    --gold: 42 80% 55%;
+    --gold: 42 90% 55%;
     --deep-maroon: 348 70% 25%;
-    --warm-charcoal: 15 15% 20%;
-    --parchment: 40 40% 95%;
-    --stone: 35 20% 78%;
-    --crimson: 348 75% 38%;
-    --amber: 38 85% 52%;
+    --warm-charcoal: 0 0% 8%;
+    --parchment: 45 30% 90%;
+    --stone: 45 15% 85%;
+    --crimson: 348 75% 45%;
+    --amber: 38 90% 55%;
     --burgundy: 340 55% 28%;
 
     /* Vibrant Gradients */
-    --gradient-heading: linear-gradient(135deg, hsl(348, 70%, 35%) 0%, hsl(42, 80%, 48%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(42, 85%, 50%) 0%, hsl(28, 70%, 55%) 100%);
-    --gradient-dark: linear-gradient(180deg, hsl(15, 20%, 8%) 0%, hsl(15, 25%, 12%) 100%);
-    --gradient-vibrant: linear-gradient(135deg, hsl(348, 65%, 35%) 0%, hsl(348, 50%, 45%) 50%, hsl(42, 70%, 50%) 100%);
+    --gradient-heading: linear-gradient(135deg, hsl(42, 90%, 50%) 0%, hsl(28, 80%, 55%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(42, 95%, 55%) 0%, hsl(28, 80%, 50%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(0, 0%, 2%) 0%, hsl(0, 0%, 6%) 100%);
+    --gradient-vibrant: linear-gradient(135deg, hsl(42, 90%, 45%) 0%, hsl(38, 85%, 55%) 50%, hsl(28, 80%, 50%) 100%);
 
     /* Enhanced Shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(15 20% 10% / 0.1);
-    --shadow-card: 0 8px 30px -8px hsl(15 20% 10% / 0.15);
-    --shadow-elevated: 0 20px 50px -15px hsl(15 20% 10% / 0.2);
-    --shadow-glow: 0 0 30px hsl(42 80% 55% / 0.3);
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.5);
+    --shadow-card: 0 8px 30px -8px hsl(0 0% 0% / 0.6);
+    --shadow-elevated: 0 20px 50px -15px hsl(0 0% 0% / 0.7);
+    --shadow-glow: 0 0 40px hsl(42 90% 50% / 0.4);
+    --shadow-gold: 0 0 60px hsl(42 90% 50% / 0.3);
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 4%;
+    --sidebar-foreground: 45 20% 90%;
+    --sidebar-primary: 42 85% 55%;
+    --sidebar-primary-foreground: 0 0% 2%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 45 20% 90%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 42 85% 55%;
   }
 
   .dark {
-    --background: 15 25% 6%;
-    --foreground: 40 30% 94%;
+    --background: 0 0% 2%;
+    --foreground: 45 20% 95%;
 
-    --card: 15 22% 10%;
-    --card-foreground: 40 30% 94%;
+    --card: 0 0% 6%;
+    --card-foreground: 45 20% 95%;
 
-    --popover: 15 25% 6%;
-    --popover-foreground: 40 30% 94%;
+    --popover: 0 0% 4%;
+    --popover-foreground: 45 20% 95%;
 
-    --primary: 42 75% 55%;
-    --primary-foreground: 15 25% 6%;
+    --primary: 42 85% 55%;
+    --primary-foreground: 0 0% 2%;
 
-    --secondary: 15 18% 15%;
-    --secondary-foreground: 40 30% 92%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 45 20% 90%;
 
-    --muted: 15 18% 15%;
-    --muted-foreground: 35 18% 55%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 45 15% 60%;
 
-    --accent: 348 55% 50%;
-    --accent-foreground: 40 30% 94%;
+    --accent: 42 90% 50%;
+    --accent-foreground: 0 0% 2%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 15 18% 18%;
-    --input: 15 18% 18%;
-    --ring: 42 75% 55%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 42 85% 55%;
 
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 4%;
+    --sidebar-foreground: 45 20% 90%;
+    --sidebar-primary: 42 85% 55%;
+    --sidebar-primary-foreground: 0 0% 2%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 45 20% 90%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 42 85% 55%;
   }
 }
 

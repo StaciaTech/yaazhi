@@ -1,5 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
-import { Quote, Phone, Mail, Instagram, Youtube, ArrowRight } from "lucide-react";
+import { Quote, Phone, Mail, Instagram, Youtube, ArrowRight, Send } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const testimonials = [
@@ -33,13 +33,44 @@ const testimonials = [
     author: "Lakshmi Venkatesh",
     role: "Wedding Planner",
   },
+  {
+    text: "Their music tells stories that touch your soul. Every note carries emotion and cultural depth.",
+    author: "Ramesh Venkataraman",
+    role: "Music Enthusiast",
+  },
+  {
+    text: "From classical ragas to contemporary beats, Yaazhi delivers a spellbinding experience every single time.",
+    author: "Meera Subramanian",
+    role: "Event Coordinator",
+  },
 ];
 
+const firstRow = testimonials.slice(0, 4);
+const secondRow = testimonials.slice(4);
+
+const TestimonialCard = ({ text, author, role }: { text: string; author: string; role: string }) => (
+  <div className="flex-shrink-0 w-[380px] mx-3">
+    <div className="rounded-2xl p-6 h-full bg-gradient-to-br from-amber/20 via-accent/15 to-gold/20 border border-accent/30 shadow-[0_0_30px_hsl(42_90%_50%/0.15)] hover:shadow-[0_0_50px_hsl(42_90%_50%/0.3)] transition-all duration-500">
+      <Quote className="w-8 h-8 text-accent/50 mb-4" />
+      <p className="text-foreground/80 leading-relaxed mb-6 font-accent italic">
+        "{text}"
+      </p>
+      <div>
+        <p className="font-serif font-medium text-accent">{author}</p>
+        <p className="text-sm text-foreground/60">{role}</p>
+      </div>
+    </div>
+  </div>
+);
+
 const Testimonials = () => {
+  const doubledFirst = [...firstRow, ...firstRow];
+  const doubledSecond = [...secondRow, ...secondRow];
+
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="section-padding pt-32 text-center">
+      <section className="section-padding pt-32 text-center bg-background">
         <h1 className="font-serif text-5xl md:text-7xl font-semibold heading-gradient mb-4">
           Testimonials
         </h1>
@@ -48,47 +79,43 @@ const Testimonials = () => {
         </p>
       </section>
 
-      {/* Testimonials Grid */}
-      <section className="section-padding pt-8">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="font-serif text-3xl md:text-4xl font-semibold heading-gradient mb-12 text-center">
+      {/* Animated Testimonials */}
+      <section className="py-16 overflow-hidden bg-background">
+        <div className="max-w-6xl mx-auto px-6 mb-12">
+          <h2 className="font-serif text-3xl md:text-4xl font-semibold heading-gradient mb-4 text-center">
             Client Testimonials
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="card-yaazhi p-8 opacity-0 animate-fade-up"
-                style={{
-                  animationDelay: `${(index + 1) * 80}ms`,
-                  animationFillMode: "forwards",
-                }}
-              >
-                <Quote className="w-8 h-8 text-accent/50 mb-4" />
-                <p className="text-foreground leading-relaxed mb-6 font-accent italic">
-                  "{testimonial.text}"
-                </p>
-                <div>
-                  <p className="font-serif font-medium text-foreground">
-                    {testimonial.author}
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    {testimonial.role}
-                  </p>
-                </div>
-              </div>
+          <p className="text-center text-muted-foreground max-w-lg mx-auto">
+            From corporates, festivals, weddings, and cultural platforms
+          </p>
+        </div>
+
+        {/* First row - moves left */}
+        <div className="relative mb-6">
+          <div className="flex animate-marquee hover:[animation-play-state:paused]">
+            {doubledFirst.map((testimonial, index) => (
+              <TestimonialCard key={`row1-${index}`} {...testimonial} />
+            ))}
+          </div>
+        </div>
+
+        {/* Second row - moves right */}
+        <div className="relative">
+          <div className="flex animate-marquee-reverse hover:[animation-play-state:paused]">
+            {doubledSecond.map((testimonial, index) => (
+              <TestimonialCard key={`row2-${index}`} {...testimonial} />
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-primary text-primary-foreground">
+      <section className="section-padding bg-gradient-to-br from-accent/10 via-card to-primary/10">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-serif text-3xl md:text-5xl font-semibold mb-4">
+          <h2 className="font-serif text-3xl md:text-5xl font-semibold heading-gradient mb-4">
             Let Yaazhi Soundtrack Your Next Event
           </h2>
-          <p className="text-lg opacity-80 mb-12 max-w-2xl mx-auto">
+          <p className="text-lg text-foreground/60 mb-12 max-w-2xl mx-auto">
             From intimate gatherings to grand celebrations, we curate musical
             experiences that resonate.
           </p>
@@ -96,40 +123,40 @@ const Testimonials = () => {
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
             <a
               href="tel:+919840549760"
-              className="flex items-center gap-3 text-lg hover:opacity-80 transition-opacity"
+              className="flex items-center gap-3 text-lg group"
             >
-              <div className="w-12 h-12 rounded-full bg-primary-foreground/20 flex items-center justify-center">
-                <Phone className="w-5 h-5" />
+              <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+                <Phone className="w-5 h-5 text-accent group-hover:text-background" />
               </div>
-              <span>98405 49760</span>
+              <span className="text-foreground group-hover:text-accent transition-colors">98405 49760</span>
             </a>
             <a
               href="tel:+918754518388"
-              className="flex items-center gap-3 text-lg hover:opacity-80 transition-opacity"
+              className="flex items-center gap-3 text-lg group"
             >
-              <div className="w-12 h-12 rounded-full bg-primary-foreground/20 flex items-center justify-center">
-                <Phone className="w-5 h-5" />
+              <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+                <Phone className="w-5 h-5 text-accent group-hover:text-background" />
               </div>
-              <span>87545 18388</span>
+              <span className="text-foreground group-hover:text-accent transition-colors">87545 18388</span>
             </a>
           </div>
 
           <a
             href="mailto:yaazhitheband@gmail.com"
-            className="inline-flex items-center gap-3 text-lg hover:opacity-80 transition-opacity mb-12"
+            className="inline-flex items-center gap-3 text-lg mb-12 group"
           >
-            <div className="w-12 h-12 rounded-full bg-primary-foreground/20 flex items-center justify-center">
-              <Mail className="w-5 h-5" />
+            <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+              <Mail className="w-5 h-5 text-accent group-hover:text-background" />
             </div>
-            <span>yaazhitheband@gmail.com</span>
+            <span className="text-foreground group-hover:text-accent transition-colors">yaazhitheband@gmail.com</span>
           </a>
 
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center gap-6 mb-12">
             <a
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-14 h-14 rounded-full bg-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/30 transition-colors"
+              className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center hover:bg-accent text-foreground hover:text-background transition-all duration-300 hover:scale-110"
             >
               <Instagram className="w-6 h-6" />
             </a>
@@ -137,11 +164,19 @@ const Testimonials = () => {
               href="https://youtube.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-14 h-14 rounded-full bg-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/30 transition-colors"
+              className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center hover:bg-accent text-foreground hover:text-background transition-all duration-300 hover:scale-110"
             >
               <Youtube className="w-6 h-6" />
             </a>
           </div>
+
+          <a
+            href="mailto:yaazhitheband@gmail.com"
+            className="btn-accent-yaazhi"
+          >
+            Send Enquiry
+            <Send className="w-4 h-4" />
+          </a>
         </div>
       </section>
     </Layout>

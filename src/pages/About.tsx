@@ -32,10 +32,10 @@ const About = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/50 to-background" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          <h1 className="font-serif text-5xl md:text-7xl font-semibold text-background mb-4">
+          <h1 className="font-serif text-5xl md:text-7xl font-semibold mb-4 text-stone">
             About Yaazhi
           </h1>
-          <p className="font-accent italic text-xl md:text-2xl text-background/80">
+          <p className="font-accent italic text-xl md:text-2xl text-amber">
             Where culture finds a modern voice
           </p>
         </div>

@@ -46,10 +46,10 @@ export const HeroSection = () => {
         animationDelay: "700ms",
         animationFillMode: "forwards"
       }}>
-          <a href="#contact" className="btn-accent-yaazhi group">
+          <Link to="/testimonials" className="btn-accent-yaazhi group">
             Enquire Here
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-          </a>
+          </Link>
           <Link to="/about" className="inline-flex items-center gap-2 px-8 py-3 rounded-full border-2 text-sm font-medium hover:bg-background/15 transition-all duration-300 hover:scale-105 text-stone border-amber">
             About Us
           </Link>

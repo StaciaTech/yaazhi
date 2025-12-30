@@ -34,12 +34,12 @@ export const TeamPreview = () => {
         }}>
               <div className="relative mb-6 mx-auto w-52 h-52 rounded-2xl overflow-hidden shadow-card group-hover:shadow-glow transition-all duration-500">
                 <img src={member.image} alt={member.name} className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
-              <h3 className="font-serif text-2xl font-normal text-foreground mb-2 group-hover:text-accent transition-colors duration-300">
+              <h3 className="font-serif text-2xl font-normal text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
                 {member.name}
               </h3>
-              <p className="text-muted-foreground font-cursive text-lg">
+              <p className="text-sm text-muted-foreground font-cursive text-lg">
                 {member.role}
               </p>
             </div>)}

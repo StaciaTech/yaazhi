@@ -41,19 +41,19 @@ const TestimonialCard = ({
   role: string;
   avatar: string;
 }) => <div className="flex-shrink-0 w-[380px] mx-3 group">
-    <div className="golden-glow-card rounded-2xl p-6 transition-all duration-500 hover:-translate-y-2 h-full animate-golden-pulse">
+    <div className="rounded-2xl p-6 shadow-card hover:shadow-elevated transition-all duration-500 hover:-translate-y-2 border border-border/50 h-full bg-accent">
       <div className="flex items-start gap-3 mb-4">
-        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-gold flex items-center justify-center text-background font-semibold text-sm flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-primary-foreground font-semibold text-sm flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
           {avatar}
         </div>
         <div>
-          <h4 className="font-serif text-lg font-medium text-accent">{author}</h4>
+          <h4 className="font-serif text-lg font-medium text-foreground">{author}</h4>
           <p className="text-sm text-muted-foreground">{role}</p>
         </div>
       </div>
       <div className="relative">
-        <Quote className="w-5 h-5 text-accent/60 absolute -top-1 -left-1" />
-        <p className="text-foreground/80 leading-relaxed pl-5 text-sm line-clamp-4">
+        <Quote className="w-5 h-5 text-accent/40 absolute -top-1 -left-1" />
+        <p className="text-muted-foreground leading-relaxed pl-5 text-sm line-clamp-4">
           {text}
         </p>
       </div>

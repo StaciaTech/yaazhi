@@ -59,18 +59,10 @@ export const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-primary-foreground/20 text-center">
-          <p className="text-sm opacity-60 flex items-center justify-center gap-1 flex-wrap">
+          <p className="text-sm opacity-60 flex items-center justify-center gap-1">
             © {new Date().getFullYear()} Yaazhi – The Indian Fusion Collective. Made with 
             <Heart className="w-4 h-4 text-accent fill-accent animate-pulse" /> 
-            for music by{" "}
-            <a 
-              href="https://www.staciacorp.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-accent hover:text-accent/80 transition-colors duration-300 underline underline-offset-2"
-            >
-              Stacia Corp
-            </a>
+            in Chennai.
           </p>
         </div>
       </div>

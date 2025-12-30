@@ -1,6 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
-import { Quote, Phone, Mail, Instagram, Youtube, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Quote, Phone, Mail, Instagram, Youtube } from "lucide-react";
 
 const testimonials = [
   {
@@ -35,60 +34,68 @@ const testimonials = [
   },
 ];
 
+const TestimonialCard = ({ text, author, role }: { text: string; author: string; role: string }) => (
+  <div className="flex-shrink-0 w-[350px] mx-4">
+    <div className="golden-glow-card rounded-2xl p-6 h-full">
+      <Quote className="w-8 h-8 text-accent/50 mb-4" />
+      <p className="text-foreground/80 leading-relaxed mb-6 font-cursive text-lg">
+        "{text}"
+      </p>
+      <div>
+        <p className="font-serif font-medium text-accent">{author}</p>
+        <p className="text-sm text-muted-foreground">{role}</p>
+      </div>
+    </div>
+  </div>
+);
+
 const Testimonials = () => {
+  const doubledTestimonials = [...testimonials, ...testimonials];
+
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="section-padding pt-32 text-center">
+      <section className="section-padding pt-32 text-center bg-background">
         <h1 className="font-serif text-5xl md:text-7xl font-semibold heading-gradient mb-4">
           Testimonials
         </h1>
-        <p className="font-accent italic text-xl md:text-2xl text-muted-foreground">
+        <p className="font-cursive text-xl md:text-2xl text-accent">
           Voices That Vouch
         </p>
       </section>
 
-      {/* Testimonials Grid */}
-      <section className="section-padding pt-8">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="font-serif text-3xl md:text-4xl font-semibold heading-gradient mb-12 text-center">
-            Client Testimonials
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="card-yaazhi p-8 opacity-0 animate-fade-up"
-                style={{
-                  animationDelay: `${(index + 1) * 80}ms`,
-                  animationFillMode: "forwards",
-                }}
-              >
-                <Quote className="w-8 h-8 text-accent/50 mb-4" />
-                <p className="text-foreground leading-relaxed mb-6 font-accent italic">
-                  "{testimonial.text}"
-                </p>
-                <div>
-                  <p className="font-serif font-medium text-foreground">
-                    {testimonial.author}
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    {testimonial.role}
-                  </p>
-                </div>
-              </div>
+      {/* Marquee Testimonials */}
+      <section className="py-16 overflow-hidden bg-background">
+        <h2 className="font-serif text-3xl md:text-4xl font-semibold heading-gradient mb-12 text-center">
+          Client Testimonials
+        </h2>
+        
+        {/* First row - moves left */}
+        <div className="relative mb-6">
+          <div className="flex animate-marquee hover:[animation-play-state:paused]">
+            {doubledTestimonials.map((testimonial, index) => (
+              <TestimonialCard key={`row1-${index}`} {...testimonial} />
+            ))}
+          </div>
+        </div>
+
+        {/* Second row - moves right */}
+        <div className="relative">
+          <div className="flex animate-marquee-reverse hover:[animation-play-state:paused]">
+            {[...doubledTestimonials].reverse().map((testimonial, index) => (
+              <TestimonialCard key={`row2-${index}`} {...testimonial} />
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-primary text-primary-foreground">
+      <section className="section-padding bg-card">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-serif text-3xl md:text-5xl font-semibold mb-4">
+          <h2 className="font-serif text-3xl md:text-5xl font-semibold heading-gradient mb-4">
             Let Yaazhi Soundtrack Your Next Event
           </h2>
-          <p className="text-lg opacity-80 mb-12 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
             From intimate gatherings to grand celebrations, we curate musical
             experiences that resonate.
           </p>
@@ -96,19 +103,19 @@ const Testimonials = () => {
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
             <a
               href="tel:+919840549760"
-              className="flex items-center gap-3 text-lg hover:opacity-80 transition-opacity"
+              className="flex items-center gap-3 text-lg text-foreground hover:text-accent transition-colors"
             >
-              <div className="w-12 h-12 rounded-full bg-primary-foreground/20 flex items-center justify-center">
-                <Phone className="w-5 h-5" />
+              <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
+                <Phone className="w-5 h-5 text-accent" />
               </div>
               <span>98405 49760</span>
             </a>
             <a
               href="tel:+918754518388"
-              className="flex items-center gap-3 text-lg hover:opacity-80 transition-opacity"
+              className="flex items-center gap-3 text-lg text-foreground hover:text-accent transition-colors"
             >
-              <div className="w-12 h-12 rounded-full bg-primary-foreground/20 flex items-center justify-center">
-                <Phone className="w-5 h-5" />
+              <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
+                <Phone className="w-5 h-5 text-accent" />
               </div>
               <span>87545 18388</span>
             </a>
@@ -116,10 +123,10 @@ const Testimonials = () => {
 
           <a
             href="mailto:yaazhitheband@gmail.com"
-            className="inline-flex items-center gap-3 text-lg hover:opacity-80 transition-opacity mb-12"
+            className="inline-flex items-center gap-3 text-lg text-foreground hover:text-accent transition-colors mb-12"
           >
-            <div className="w-12 h-12 rounded-full bg-primary-foreground/20 flex items-center justify-center">
-              <Mail className="w-5 h-5" />
+            <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
+              <Mail className="w-5 h-5 text-accent" />
             </div>
             <span>yaazhitheband@gmail.com</span>
           </a>
@@ -129,7 +136,7 @@ const Testimonials = () => {
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-14 h-14 rounded-full bg-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/30 transition-colors"
+              className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center hover:bg-accent hover:text-background transition-all duration-300 text-accent"
             >
               <Instagram className="w-6 h-6" />
             </a>
@@ -137,7 +144,7 @@ const Testimonials = () => {
               href="https://youtube.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-14 h-14 rounded-full bg-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/30 transition-colors"
+              className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center hover:bg-accent hover:text-background transition-all duration-300 text-accent"
             >
               <Youtube className="w-6 h-6" />
             </a>

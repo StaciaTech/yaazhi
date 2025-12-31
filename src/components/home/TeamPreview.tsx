@@ -64,7 +64,7 @@ export const TeamPreview = () => {
               <h3 className="font-serif text-2xl font-normal text-accent mb-2 group-hover:text-primary transition-colors duration-300">
                 {member.name}
               </h3>
-              <p className="text-sm text-foreground/70 font-cursive text-lg">
+              <p className="text-sm text-foreground/70 font-normal text-lg">
                 {member.role}
               </p>
             </div>

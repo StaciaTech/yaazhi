@@ -78,7 +78,7 @@ export const Footer = () => {
               </a>
               <div className="flex items-center gap-4 mt-4">
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/yaazhitheband"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-accent/10 hover:bg-accent hover:text-background hover:scale-110 transition-all duration-300"
@@ -86,7 +86,7 @@ export const Footer = () => {
                   <Instagram className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://youtube.com"
+                  href="https://youtube.com/@ycsyaazhitheband?si=fMumDPsN4EOW4yR5"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-accent/10 hover:bg-accent hover:text-background hover:scale-110 transition-all duration-300"

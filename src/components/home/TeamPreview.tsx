@@ -1,22 +1,29 @@
 import team1 from "@/assets/team/team-1.jpg";
-import team2 from "@/assets/team-2.jpg";
-import team3 from "@/assets/team-3.jpg";
+import team2 from "@/assets/team/Bala Main.jpg";
+import team3 from "@/assets/team/Harinee Main.jpg";
+import team4 from "@/assets/team/KK Main.jpg";
+import team5 from "@/assets/team/Lakshmi Main.jpg";
 
 const teamMembers = [
   {
+    name: "Kiran Kashyap",
+    role: "Founder | Artistic Director | Multi-Instrumentalist",
+    image: team4,
+  },
+  {
     name: "C. S. Lakshmi",
-    role: "Co-Founder | Executive Producer",
-    image: team1,
+    role: "Co-Founder | Executive Producer | Lead Vocalist",
+    image: team5,
   },
   {
     name: "Harinee Muraleedharan",
-    role: "Management | COAR",
-    image: team2,
+    role: "Vocalist | Executive Management – COAR",
+    image: team3,
   },
   {
-    name: "Balasubramaniyam",
-    role: "Creative Director",
-    image: team3,
+    name: "Balasubramaniyan",
+    role: "Keyboardist | Supporting Vocalist | Creative Director",
+    image: team2,
   },
 ];
 
@@ -36,7 +43,7 @@ export const TeamPreview = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {teamMembers.map((member, index) => (
             <div
               key={member.name}
@@ -50,7 +57,7 @@ export const TeamPreview = () => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>

@@ -1,28 +1,31 @@
 import { Play, Video } from "lucide-react";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import heroImage from "@/assets/hero-concert.jpg";
+import { useState } from "react";
+import gallery1 from "@/assets/Yt/ChatGPT Image Dec 31, 2025 at 03_05_07 PM.png";
+import gallery2 from "@/assets/Yt/IMG_3988.JPG";
+import heroImage from "@/assets/Yt/Rajini Medley Thumbnail Final.png";
 const videos = [
   {
     title: "Tumbivaa × Kadhal Rojave",
     subtitle: "Rock Fusion",
-    thumbnail: gallery1,
-    videoId: "dQw4w9WgXcQ",
+    thumbnail: gallery2,
+    videoId: "5rUZFkDTP6Y",
   },
   {
     title: "The Super Star Medley",
     subtitle: "Rajinikanth Tribute",
-    thumbnail: gallery2,
-    videoId: "dQw4w9WgXcQ",
+    thumbnail: heroImage,
+    videoId: "VR9dvSnwDMc",
   },
   {
     title: "Aval – SVCE",
     subtitle: "Live Performance",
-    thumbnail: heroImage,
-    videoId: "dQw4w9WgXcQ",
+    thumbnail: gallery1,
+    videoId: "wuikaO1x09c",
   },
 ];
 export const FeaturedVideos = () => {
+  const [playingVideoId, setPlayingVideoId] = useState<string | null>(null);
+
   return (
     <section className="section-padding relative">
       {/* Decorative elements */}
@@ -49,34 +52,61 @@ export const FeaturedVideos = () => {
           {videos.map((video, index) => (
             <div
               key={video.title}
-              className="group card-yaazhi overflow-hidden opacity-0 animate-fade-up cursor-pointer"
+              className="group card-yaazhi overflow-hidden opacity-0 animate-fade-up cursor-pointer block"
               style={{
                 animationDelay: `${(index + 1) * 150}ms`,
                 animationFillMode: "forwards",
               }}
+              onClick={() => setPlayingVideoId(video.videoId)}
             >
-              <div className="relative aspect-[4/5] overflow-hidden">
-                <img
-                  src={video.thumbnail}
-                  alt={video.title}
-                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+              <div className="relative aspect-[4/5] overflow-hidden bg-black">
+                {playingVideoId === video.videoId ? (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src={`https://www.youtube.com/embed/${video.videoId}?autoplay=1`}
+                      title={video.title}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full aspect-video"
+                    ></iframe>
+                  </div>
+                ) : (
+                  <>
+                    {/* Blurred Background */}
+                    <img
+                      src={video.thumbnail}
+                      alt={video.title}
+                      className="absolute inset-0 w-full h-full object-cover blur-2xl scale-125 opacity-50"
+                    />
 
-                {/* Play Button */}
-                <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-accent flex items-center justify-center transition-all duration-500 group-hover:scale-125 shadow-elevated pulse-glow">
-                  <Play className="w-6 h-6 text-accent-foreground ml-1" />
-                </button>
+                    {/* Main Thumbnail */}
+                    <img
+                      src={video.thumbnail}
+                      alt={video.title}
+                      className="relative z-10 w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
+                    />
 
-                {/* Title */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-                  <h3 className="font-serif text-2xl font-normal mb-1 text-[#f5f40cc]">
-                    {video.title}
-                  </h3>
-                  <p className="text-sm font-cursive text-lg text-gold">
-                    {video.subtitle}
-                  </p>
-                </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-20" />
+
+                    {/* Play Button */}
+                    <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-accent flex items-center justify-center transition-all duration-500 group-hover:scale-125 shadow-elevated pulse-glow z-30">
+                      <Play className="w-6 h-6 text-accent-foreground ml-1" />
+                    </button>
+
+                    {/* Title */}
+                    <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500 z-30">
+                      <h3 className="font-serif text-2xl font-normal mb-1 text-[#f5f40cc]">
+                        {video.title}
+                      </h3>
+                      <p className="text-sm font-cursive text-lg text-gold">
+                        {video.subtitle}
+                      </p>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           ))}

@@ -1,5 +1,5 @@
 import { ArrowRight, ChevronDown } from "lucide-react";
-import heroImage from "@/assets/hero-concert.jpg";
+import heroImage from "@/assets/Hero image option 2.jpeg";
 
 export const HeroSection = () => {
   const scrollToContact = (e: React.MouseEvent) => {

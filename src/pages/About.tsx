@@ -202,7 +202,7 @@ const About = () => {
             Direct booking and collaboration enquiries welcomed.
           </p>
           <Link to="/testimonials" className="btn-accent-yaazhi">
-            Book Now
+            Get in Touch
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

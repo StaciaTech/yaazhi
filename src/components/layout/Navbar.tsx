@@ -82,7 +82,7 @@ export const Navbar = () => {
               onClick={scrollToContact}
               className="btn-accent-yaazhi text-sm"
             >
-              Book Now
+              Get in Touch
             </button>
           </div>
 

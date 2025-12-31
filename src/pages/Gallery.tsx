@@ -69,11 +69,11 @@ const categories = [
     ],
   },
   {
-    title: "Karaikudi Show",
+    title: "Private Show",
     value: "pro-show",
     images: [
-      { src: gallery1, alt: "Karaikudi Show 1", className: "aspect-square" },
-      { src: gallery2, alt: "Karaikudi Show 2", className: "aspect-square" },
+      { src: gallery1, alt: "Private Show 1", className: "aspect-square" },
+      { src: gallery2, alt: "Private Show 2", className: "aspect-square" },
     ],
   },
 ];
@@ -363,7 +363,7 @@ const Gallery = () => {
       <section className="section-padding">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-serif text-3xl md:text-4xl font-semibold heading-gradient mb-8">
-            Studio Moments
+            Band Moments
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {teamPhotos.map((photo, index) => (

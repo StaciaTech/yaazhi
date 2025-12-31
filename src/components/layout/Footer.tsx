@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Instagram, Youtube, Phone, Mail, Heart } from "lucide-react";
 import BuiltIcon from "../../assets/BuiltIcon.svg";
+import logo from "@/assets/Yaazhi OG Logo .png";
 
 export const Footer = () => {
   return (
@@ -15,9 +16,12 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
           <div>
-            <h3 className="font-serif text-3xl font-normal mb-4">
-              <span className="text-accent">Y</span>aazhi
-            </h3>
+            <div className="flex items-start">
+              <img src={logo} alt="" className="w-[40px] object-contain" />
+              <h3 className="font-serif text-3xl font-normal mb-4">
+                <span className="text-accent ml-[12px]">Y</span>aazhi
+              </h3>
+            </div>
             <p className="font-cursive text-xl text-accent/80 mb-4">
               The Indian Fusion Collective
             </p>
@@ -26,7 +30,6 @@ export const Footer = () => {
               global soundscapes.
             </p>
           </div>
-
           {/* Quick Links */}
           <div>
             <h4 className="font-serif text-xl font-normal mb-6 text-accent">

@@ -26,7 +26,7 @@ const teamMembers = [
   },
   {
     name: "Harinee Muraleedharan",
-    role: "Vocalist | Executive Management – COAR",
+    role: "Vocalist | Non Executive Management Team",
     image: team3,
   },
   {

@@ -148,7 +148,7 @@ const Gallery = () => {
     { id: "HD video Fusion", label: "HD Fusion" },
     { id: "InStudioRehearsal", label: "In Studio" },
     { id: "CollegeShows", label: "College Show" },
-    { id: "PubResturantshows", label: "Pub & Resturant" },
+    { id: "PubResturantshows", label: "Pub & Restaurant" },
     { id: "PublicShows", label: "Public Show" },
   ];
 

@@ -3,8 +3,8 @@
     "category": "CollegeShows",
     "videos": [
       {
-        "title": "SVce Thaesudaree",
-        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/CollegeShows/SVce%20Thaesudaree.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAX3TSGNRNLSEYH36F%2F20251231%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20251231T125658Z&X-Amz-Expires=604800&X-Amz-Signature=b405a9bd0e2da7b4f8bc2719a28b64000ad0737ca5ef21da3ba442f5826ae27e&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "title": "SVCE Thaesudaree",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/CollegeShows/SVce%20Thaesudaree.mp4",
         "thumbnail": ""
       }
     ]
@@ -14,12 +14,12 @@
     "videos": [
       {
         "title": "MSV Medley Final",
-        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/HD%20video%20Fusion/MSV%20Medley%20Final.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAX3TSGNRNLSEYH36F%2F20251231%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20251231T125658Z&X-Amz-Expires=604800&X-Amz-Signature=987c72576666b4cd77b23966f1508f609b6b92c8be1b18380c9d08df4b6b7d87&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/HD%20video%20Fusion/MSV%20Medley%20Final.mov",
         "thumbnail": ""
       },
       {
         "title": "Mokshamu Galada For Preview",
-        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/HD%20video%20Fusion/Mokshamu%20Galada%20For%20Preview.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAX3TSGNRNLSEYH36F%2F20251231%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20251231T125658Z&X-Amz-Expires=604800&X-Amz-Signature=52a569990cad1a09ae4ef571f188d254c3f1a9ee4bd2f4a8e32450cd8dfaa021&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/HD%20video%20Fusion/Mokshamu%20Galada%20For%20Preview.mov",
         "thumbnail": ""
       }
     ]
@@ -29,7 +29,7 @@
     "videos": [
       {
         "title": "Thensudare",
-        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/InStudioRehearsal/Thensudare.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAX3TSGNRNLSEYH36F%2F20251231%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20251231T125658Z&X-Amz-Expires=604800&X-Amz-Signature=0615199724e35f6e407d3ff0a5700916dca5623347a23363ae86e1437e0ec444&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/InStudioRehearsal/Thensudare.mp4",
         "thumbnail": ""
       }
     ]
@@ -39,7 +39,7 @@
     "videos": [
       {
         "title": "Catamaran Badtameez.MOV",
-        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/PubResturantshows/Catamaran%20Badtameez.MOV?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAX3TSGNRNLSEYH36F%2F20251231%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20251231T125658Z&X-Amz-Expires=604800&X-Amz-Signature=60a235020de3f72c995af64702104a71e959dd1b878269cba26ee2248e83718e&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/PubResturantshows/Catamaran%20Badtameez.MOV",
         "thumbnail": ""
       }
     ]
@@ -49,7 +49,7 @@
     "videos": [
       {
         "title": "Sundari KRAFT",
-        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/PublicShows/Sundari%20KRAFT.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAX3TSGNRNLSEYH36F%2F20251231%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20251231T125658Z&X-Amz-Expires=604800&X-Amz-Signature=043d14d9da2c079e294a65bb645e422e018aa31dbb9d4c6e814d2ef4178ea2c3&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/PublicShows/Sundari%20KRAFT.mp4",
         "thumbnail": ""
       }
     ]
@@ -59,32 +59,32 @@
     "videos": [
       {
         "title": "Jan 26 Phoenix mall Reel",
-        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/ShowReelsVideos/Jan%2026%20Phoenix%20mall%20Reel.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAX3TSGNRNLSEYH36F%2F20251231%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20251231T125658Z&X-Amz-Expires=604800&X-Amz-Signature=1f3dea7a7893c748ef671cadff9b15f120a8d765ecf57bffd6c11aa747fb0d2f&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/ShowReelsVideos/Jan%2026%20Phoenix%20mall%20Reel.mp4",
         "thumbnail": ""
       },
       {
         "title": "Rajini medley Shoot Day BTS",
-        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/ShowReelsVideos/Rajini%20medley%20Shoot%20Day%20BTS.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAX3TSGNRNLSEYH36F%2F20251231%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20251231T125658Z&X-Amz-Expires=604800&X-Amz-Signature=f41deaa5158df711bb936d8839f977c3d54bf81f40908361dee89c6386fa3c32&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/ShowReelsVideos/Rajini%20medley%20Shoot%20Day%20BTS.mp4",
         "thumbnail": ""
       },
       {
         "title": "SVCE Cuts",
-        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/ShowReelsVideos/SVCE%20Cuts.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAX3TSGNRNLSEYH36F%2F20251231%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20251231T125658Z&X-Amz-Expires=604800&X-Amz-Signature=474923bdc1d8a3809dbe6b2519c4212ff5e4fb17d500debf2cc7b5ea0d4795e0&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/ShowReelsVideos/SVCE%20Cuts.mp4",
         "thumbnail": ""
       },
       {
         "title": "YAAZHI PHOENIX APRL 28 HIGHLIGHTS",
-        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/ShowReelsVideos/YAAZHI%20PHOENIX%20APRL%2028%20HIGHLIGHTS.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAX3TSGNRNLSEYH36F%2F20251231%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20251231T125658Z&X-Amz-Expires=604800&X-Amz-Signature=b2b32b1e48dd692b0db565b705566a23a5366cb7b5e32cce857e743b0d453975&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/ShowReelsVideos/YAAZHI%20PHOENIX%20APRL%2028%20HIGHLIGHTS.mp4",
         "thumbnail": ""
       },
       {
         "title": "YMCA.MP4",
-        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/ShowReelsVideos/YMCA.MP4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAX3TSGNRNLSEYH36F%2F20251231%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20251231T125658Z&X-Amz-Expires=604800&X-Amz-Signature=60e081e4f5b29d3a22ce57192255b3391494e5709ec8532115a134c1b78f7be2&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/ShowReelsVideos/YMCA.MP4",
         "thumbnail": ""
       },
       {
         "title": "Yaazhi ChemFest Clg",
-        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/ShowReelsVideos/Yaazhi%20ChemFest%20Clg.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAX3TSGNRNLSEYH36F%2F20251231%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20251231T125658Z&X-Amz-Expires=604800&X-Amz-Signature=0a89fe7c0c9f7295b5e8be388c3445f634272a3917c6e83a9b54c169e94c6c9f&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/ShowReelsVideos/Yaazhi%20ChemFest%20Clg.mp4",
         "thumbnail": ""
       }
     ]
@@ -94,32 +94,32 @@
     "videos": [
       {
         "title": "Gentimelam",
-        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/Wedding/Gentimelam.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAX3TSGNRNLSEYH36F%2F20251231%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20251231T125658Z&X-Amz-Expires=604800&X-Amz-Signature=45f10168e3db747e519a011ccf02644f09bab58184fb58808df4026e4deff5ec&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/Wedding/Gentimelam.mp4",
         "thumbnail": ""
       },
       {
         "title": "Kajrare BGM",
-        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/Wedding/Kajrare%20BGM.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAX3TSGNRNLSEYH36F%2F20251231%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20251231T125658Z&X-Amz-Expires=604800&X-Amz-Signature=231d1d08f7c8c5520dc29e2868d6cf7c7cdb36c6faa1afd34481f86cf490dcb4&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/Wedding/Kajrare%20BGM.mp4",
         "thumbnail": ""
       },
       {
         "title": "Vaseegara",
-        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/Wedding/Vaseegara.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAX3TSGNRNLSEYH36F%2F20251231%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20251231T125658Z&X-Amz-Expires=604800&X-Amz-Signature=6a79c2ed06ef5a3f907e74a7f5e37945155f3f0fa754475c810c45542da15285&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/Wedding/Vaseegara.mp4",
         "thumbnail": ""
       },
       {
         "title": "Wedding 1 ",
-        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/Wedding/Wedding%201%20.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAX3TSGNRNLSEYH36F%2F20251231%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20251231T125658Z&X-Amz-Expires=604800&X-Amz-Signature=1d88edac0ad0b4bb16aff5886ec3649341c6fc19757b94de3e3b25c05f0a585a&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/Wedding/Wedding%201%20.mp4",
         "thumbnail": ""
       },
       {
         "title": "Wedding 4",
-        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/Wedding/Wedding%204.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAX3TSGNRNLSEYH36F%2F20251231%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20251231T125658Z&X-Amz-Expires=604800&X-Amz-Signature=5226ac139f872dfa2930cd5220a65fbea0a160959dfc1861ad8a962b7bbaf96c&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/Wedding/Wedding%204.mp4",
         "thumbnail": ""
       },
       {
         "title": "Yaazhi- Wedding montage",
-        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/Wedding/Yaazhi-%20Wedding%20montage.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAX3TSGNRNLSEYH36F%2F20251231%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20251231T125658Z&X-Amz-Expires=604800&X-Amz-Signature=53b397355666f039e051f216c3717748cd20aaf7caf1d7a5736cf3525aeca3bf&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/Wedding/Yaazhi-%20Wedding%20montage.mp4",
         "thumbnail": ""
       }
     ]

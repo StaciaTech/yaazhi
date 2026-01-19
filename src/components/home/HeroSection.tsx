@@ -1,12 +1,19 @@
 import { ArrowRight, ChevronDown } from "lucide-react";
-import heroImage from "@/assets/hero-concert.jpg";
+import heroImage from "@/assets/hero-2.png";
 
 export const HeroSection = () => {
   const scrollToContact = (e: React.MouseEvent) => {
     e.preventDefault();
-    const contactSection = document.getElementById('contact-section');
+    const contactSection = document.getElementById("contact-section");
     if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToTeam = () => {
+    const teamSection = document.getElementById("core-team-section");
+    if (teamSection) {
+      teamSection.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   };
 
@@ -88,15 +95,17 @@ export const HeroSection = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 animate-fade-up"
+      <button
+        onClick={scrollToTeam}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 animate-fade-up cursor-pointer hover:scale-110 transition-transform duration-300"
         style={{
           animationDelay: "1000ms",
           animationFillMode: "forwards",
         }}
+        aria-label="Scroll to Core Team section"
       >
-        <ChevronDown className="w-8 h-8 text-accent/60 animate-bounce-subtle" />
-      </div>
+        <ChevronDown className="w-8 h-8 text-accent/60 animate-bounce-subtle hover:text-accent transition-colors duration-300" />
+      </button>
     </section>
   );
 };

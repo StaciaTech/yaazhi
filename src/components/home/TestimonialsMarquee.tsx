@@ -1,4 +1,5 @@
 import { Quote } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 const testimonials = [
   {
@@ -50,14 +51,16 @@ const TestimonialCard = ({
   role: string;
   avatar: string;
 }) => (
-  <div className="flex-shrink-0 w-[380px] mx-3 group">
+  <div className="flex-shrink-0 w-[380px] mx-3 group select-none">
     <div className="rounded-2xl p-6 transition-all duration-500 hover:-translate-y-2 h-full bg-gradient-to-br from-amber/20 via-accent/15 to-gold/20 border border-accent/30 shadow-[0_0_30px_hsl(42_90%_50%/0.15)] hover:shadow-[0_0_50px_hsl(42_90%_50%/0.3)]">
       <div className="flex items-start gap-3 mb-4">
         <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-amber flex items-center justify-center text-background font-semibold text-sm flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-glow">
           {avatar}
         </div>
         <div>
-          <h4 className="font-serif text-lg font-medium text-accent">{author}</h4>
+          <h4 className="font-serif text-lg font-medium text-accent">
+            {author}
+          </h4>
           <p className="text-sm text-foreground/60">{role}</p>
         </div>
       </div>
@@ -70,6 +73,101 @@ const TestimonialCard = ({
     </div>
   </div>
 );
+
+const DraggableMarqueeRow = ({
+  children,
+  direction = "left",
+  speed = 1,
+  className = "",
+}: {
+  children: React.ReactNode;
+  direction?: "left" | "right";
+  speed?: number;
+  className?: string;
+}) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isPaused, setIsPaused] = useState(false);
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const scrollLeftStart = useRef(0);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    if (direction === "right" && container.scrollLeft === 0) {
+      container.scrollLeft = container.scrollWidth / 2;
+    }
+
+    let animationFrameId: number;
+
+    const scroll = () => {
+      if (!isPaused && !isDragging.current && container) {
+        if (direction === "left") {
+          if (container.scrollLeft >= container.scrollWidth / 2) {
+            container.scrollLeft = 0;
+          } else {
+            container.scrollLeft += speed;
+          }
+        } else {
+          // Right direction logic: scrollLeft decreases
+          if (container.scrollLeft <= 0) {
+            container.scrollLeft = container.scrollWidth / 2;
+          } else {
+            container.scrollLeft -= speed;
+          }
+        }
+      }
+      animationFrameId = requestAnimationFrame(scroll);
+    };
+
+    animationFrameId = requestAnimationFrame(scroll);
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [direction, speed, isPaused]);
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    isDragging.current = true;
+    setIsPaused(true);
+    startX.current = e.pageX - (containerRef.current?.offsetLeft || 0);
+    scrollLeftStart.current = containerRef.current?.scrollLeft || 0;
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging.current || !containerRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - (containerRef.current.offsetLeft || 0);
+    const walk = (x - startX.current) * 2;
+    containerRef.current.scrollLeft = scrollLeftStart.current - walk;
+  };
+
+  const handleMouseUp = () => {
+    isDragging.current = false;
+  };
+
+  const handleMouseEnter = () => {
+    setIsPaused(true);
+  };
+
+  const handleMouseLeave = () => {
+    isDragging.current = false;
+    setIsPaused(false);
+  };
+
+  return (
+    <div
+      className={`relative w-full overflow-x-hidden cursor-grab active:cursor-grabbing ${className}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onMouseDown={handleMouseDown}
+      onMouseUp={handleMouseUp}
+      onMouseMove={handleMouseMove}
+      ref={containerRef}
+    >
+      <div className="flex w-max">{children}</div>
+    </div>
+  );
+};
 
 export const TestimonialsMarquee = () => {
   const doubledTestimonials = [...testimonials, ...testimonials];
@@ -91,22 +189,18 @@ export const TestimonialsMarquee = () => {
       </div>
 
       {/* First row - moves left */}
-      <div className="relative mb-6">
-        <div className="flex animate-marquee hover:[animation-play-state:paused]">
-          {doubledTestimonials.map((testimonial, index) => (
-            <TestimonialCard key={`row1-${index}`} {...testimonial} />
-          ))}
-        </div>
-      </div>
+      <DraggableMarqueeRow direction="left" className="mb-6">
+        {doubledTestimonials.map((testimonial, index) => (
+          <TestimonialCard key={`row1-${index}`} {...testimonial} />
+        ))}
+      </DraggableMarqueeRow>
 
       {/* Second row - moves right */}
-      <div className="relative">
-        <div className="flex animate-marquee-reverse hover:[animation-play-state:paused]">
-          {[...doubledTestimonials].reverse().map((testimonial, index) => (
-            <TestimonialCard key={`row2-${index}`} {...testimonial} />
-          ))}
-        </div>
-      </div>
+      <DraggableMarqueeRow direction="right">
+        {[...doubledTestimonials].reverse().map((testimonial, index) => (
+          <TestimonialCard key={`row2-${index}`} {...testimonial} />
+        ))}
+      </DraggableMarqueeRow>
     </section>
   );
 };

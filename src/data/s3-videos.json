@@ -1,0 +1,127 @@
+[
+  {
+    "category": "CollegeShows",
+    "videos": [
+      {
+        "title": "SVCE Thaesudaree",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/CollegeShows/SVCE%20Thaesudaree.mp4",
+        "thumbnail": ""
+      }
+    ]
+  },
+  {
+    "category": "HD video Fusion",
+    "videos": [
+      {
+        "title": "MSV Medley Final",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/HD%20video%20Fusion/MSV%20Medley%20Final.mov",
+        "thumbnail": ""
+      },
+      {
+        "title": "Mokshamu Galada For Preview",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/HD%20video%20Fusion/Mokshamu%20Galada%20For%20Preview.mov",
+        "thumbnail": ""
+      }
+    ]
+  },
+  {
+    "category": "InStudioRehearsal",
+    "videos": [
+      {
+        "title": "Thensudare",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/InStudioRehearsal/Thensudare.mp4",
+        "thumbnail": ""
+      }
+    ]
+  },
+  {
+    "category": "PubResturantshows",
+    "videos": [
+      {
+        "title": "Catamaran Badtameez",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/PubResturantshows/Catamaran%20Badtameez.mov",
+        "thumbnail": ""
+      }
+    ]
+  },
+  {
+    "category": "PublicShows",
+    "videos": [
+      {
+        "title": "Sundari KRAFT",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/PublicShows/Sundari%20KRAFT.mp4",
+        "thumbnail": ""
+      }
+    ]
+  },
+  {
+    "category": "ShowReelsVideos",
+    "videos": [
+      {
+        "title": "Jan 26 Phoenix mall Reel",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/ShowReelsVideos/Jan%2026%20Phoenix%20mall%20Reel.mp4",
+        "thumbnail": ""
+      },
+      {
+        "title": "Rajini medley Shoot Day BTS",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/ShowReelsVideos/Rajini%20medley%20Shoot%20Day%20BTS.mp4",
+        "thumbnail": ""
+      },
+      {
+        "title": "SVCE Cuts",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/ShowReelsVideos/SVCE%20Cuts.mp4",
+        "thumbnail": ""
+      },
+      {
+        "title": "YAAZHI PHOENIX APRL 28 HIGHLIGHTS",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/ShowReelsVideos/YAAZHI%20PHOENIX%20APRL%2028%20HIGHLIGHTS.mp4",
+        "thumbnail": ""
+      },
+      {
+        "title": "YMCA",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/ShowReelsVideos/YMCA.mp4",
+        "thumbnail": ""
+      },
+      {
+        "title": "Yaazhi ChemFest Clg",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/ShowReelsVideos/Yaazhi%20ChemFest%20Clg.mp4",
+        "thumbnail": ""
+      }
+    ]
+  },
+  {
+    "category": "Wedding",
+    "videos": [
+      {
+        "title": "Gentimelam",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/Wedding/Gentimelam.mp4",
+        "thumbnail": ""
+      },
+      {
+        "title": "Kajrare BGM",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/Wedding/Kajrare%20BGM.mp4",
+        "thumbnail": ""
+      },
+      {
+        "title": "Vaseegara",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/Wedding/Vaseegara.mp4",
+        "thumbnail": ""
+      },
+      {
+        "title": "Wedding 1 ",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/Wedding/Wedding%201%20.mp4",
+        "thumbnail": ""
+      },
+      {
+        "title": "Wedding 4",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/Wedding/Wedding%204.mp4",
+        "thumbnail": ""
+      },
+      {
+        "title": "Yaazhi- Wedding montage",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/Wedding/Yaazhi-%20Wedding%20montage.mp4",
+        "thumbnail": ""
+      }
+    ]
+  }
+]

@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { Instagram, Youtube, Phone, Mail, Heart } from "lucide-react";
+import BuiltIcon from "../../assets/BuiltIcon.svg";
+import logo from "@/assets/Yaazhi OG Logo .png";
 
 export const Footer = () => {
   return (
@@ -14,9 +16,12 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
           <div>
-            <h3 className="font-serif text-3xl font-normal mb-4">
-              <span className="text-accent">Y</span>aazhi
-            </h3>
+            <div className="flex items-start">
+              <img src={logo} alt="" className="w-[40px] object-contain" />
+              <h3 className="font-serif text-3xl font-normal mb-4">
+                <span className="text-accent ml-[12px]">Y</span>aazhi
+              </h3>
+            </div>
             <p className="font-cursive text-xl text-accent/80 mb-4">
               The Indian Fusion Collective
             </p>
@@ -25,18 +30,27 @@ export const Footer = () => {
               global soundscapes.
             </p>
           </div>
-
           {/* Quick Links */}
           <div>
-            <h4 className="font-serif text-xl font-normal mb-6 text-accent">Explore</h4>
+            <h4 className="font-serif text-xl font-normal mb-6 text-accent">
+              Explore
+            </h4>
             <div className="flex flex-col gap-4">
-              {["About Us", "Gallery", "News & Press", "Testimonials"].map((link) => (
+              {[
+                { name: "About Us", link: "/about" },
+                { name: "Gallery", link: "/gallery" },
+                { name: "News & Press", link: "/news" },
+                { name: "Testimonials", link: "/testimonials" },
+              ].map((link) => (
                 <Link
-                  key={link}
-                  to={`/${link.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`}
+                  key={link.name}
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}
+                  to={link.link}
                   className="text-sm text-foreground/60 hover:text-accent hover:translate-x-2 transition-all duration-300 inline-block"
                 >
-                  {link}
+                  {link.name}
                 </Link>
               ))}
             </div>
@@ -44,7 +58,9 @@ export const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-serif text-xl font-normal mb-6 text-accent">Contact</h4>
+            <h4 className="font-serif text-xl font-normal mb-6 text-accent">
+              Contact
+            </h4>
             <div className="flex flex-col gap-4">
               <a
                 href="tel:+919840549760"
@@ -62,7 +78,7 @@ export const Footer = () => {
               </a>
               <div className="flex items-center gap-4 mt-4">
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/yaazhitheband"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-accent/10 hover:bg-accent hover:text-background hover:scale-110 transition-all duration-300"
@@ -70,7 +86,7 @@ export const Footer = () => {
                   <Instagram className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://youtube.com"
+                  href="https://youtube.com/@ycsyaazhitheband?si=fMumDPsN4EOW4yR5"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-accent/10 hover:bg-accent hover:text-background hover:scale-110 transition-all duration-300"
@@ -84,17 +100,32 @@ export const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-border text-center">
           <p className="text-sm text-foreground/50 flex items-center justify-center gap-1 flex-wrap">
-            © {new Date().getFullYear()} Yaazhi – The Indian Fusion Collective. Made with
-            <Heart className="w-4 h-4 text-accent fill-accent animate-pulse mx-1" />
-            for music by{" "}
+            © {new Date().getFullYear()} Yaazhi – The Indian Fusion Collective.
+            <a
+              href="http://builtbystacia.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-red-500 hover:underline ml-1 flex"
+            >
+              <img
+                src={BuiltIcon}
+                alt="Built by Stacia"
+                className="w-[20px] h-[20px]"
+              />{" "}
+              Built
+            </a>{" "}
+            by{" "}
             <a
               href="https://www.staciacorp.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-accent hover:underline ml-1"
+              className="text-accent hover:underline "
             >
-              Stacia Corp
-            </a>
+              Stacia
+            </a>{" "}
+            with
+            <Heart className="w-4 h-4 text-accent fill-accent animate-pulse mx-1" />
+            for music{" "}
           </p>
         </div>
       </div>

@@ -4,7 +4,7 @@
     "videos": [
       {
         "title": "SVCE Thaesudaree",
-        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/CollegeShows/SVce%20Thaesudaree.mp4",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/CollegeShows/SVCE%20Thaesudaree.mp4",
         "thumbnail": ""
       }
     ]
@@ -39,7 +39,7 @@
     "videos": [
       {
         "title": "Catamaran Badtameez",
-        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/PubResturantshows/Catamaran%20Badtameez.MOV",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/PubResturantshows/Catamaran%20Badtameez.mov",
         "thumbnail": ""
       }
     ]
@@ -79,7 +79,7 @@
       },
       {
         "title": "YMCA",
-        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/ShowReelsVideos/YMCA.MP4",
+        "videoUrl": "https://builtbystacia.s3.ap-south-1.amazonaws.com/yaazhi/ShowReelsVideos/YMCA.mp4",
         "thumbnail": ""
       },
       {

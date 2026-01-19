@@ -72,30 +72,48 @@ async function syncVideos() {
       const ext = path.extname(filename).toLowerCase();
       const basename = path.basename(filename, ext);
 
-      const getCommand = new GetObjectCommand({
-        Bucket: BUCKET_NAME,
-        Key: key,
-      });
-      // 7 days expiration (604800 seconds)
-      const signedUrl = await getSignedUrl(s3Client, getCommand, {
-        expiresIn: 604800,
-      });
+      // const getCommand = new GetObjectCommand({
+      //   Bucket: BUCKET_NAME,
+      //   Key: key,
+      // });
+      // // 7 days expiration (604800 seconds)
+      // const signedUrl = await getSignedUrl(s3Client, getCommand, {
+      //   expiresIn: 604800,
+      // });
+
+      const publicUrl = `https://${BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com/${encodeURI(key)}`;
 
       // Initialize category bucket
       if (!categoryMap[category]) {
         categoryMap[category] = {};
       }
 
-      // Initialize file bucket (grouping by basename to pair video + thumb)
+      // Initialize file bucket
       if (!categoryMap[category][basename]) {
         categoryMap[category][basename] = { title: basename };
       }
 
       if ([".mp4", ".mov", ".webm", ".mkv"].includes(ext)) {
-        categoryMap[category][basename].videoUrl = signedUrl;
+        categoryMap[category][basename].videoUrl = publicUrl; // Use publicUrl
       } else if ([".jpg", ".jpeg", ".png", ".webp"].includes(ext)) {
-        categoryMap[category][basename].thumbnail = signedUrl;
+        categoryMap[category][basename].thumbnail = publicUrl; // Use publicUrl
       }
+
+      // // Initialize category bucket
+      // if (!categoryMap[category]) {
+      //   categoryMap[category] = {};
+      // }
+
+      // // Initialize file bucket (grouping by basename to pair video + thumb)
+      // if (!categoryMap[category][basename]) {
+      //   categoryMap[category][basename] = { title: basename };
+      // }
+
+      // if ([".mp4", ".mov", ".webm", ".mkv"].includes(ext)) {
+      //   categoryMap[category][basename].videoUrl = signedUrl;
+      // } else if ([".jpg", ".jpeg", ".png", ".webp"].includes(ext)) {
+      //   categoryMap[category][basename].thumbnail = signedUrl;
+      // }
     }
 
     // Flatten to final JSON structure

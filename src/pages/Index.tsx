@@ -6,12 +6,14 @@ import { GalleryPreview } from "@/components/home/GalleryPreview";
 import { FeaturedVideos } from "@/components/home/FeaturedVideos";
 import { TestimonialsMarquee } from "@/components/home/TestimonialsMarquee";
 import { ContactSection } from "@/components/home/ContactSection";
+import ClientsMarquee from "../components/home/ClientsMarquee";
 
 const Index = () => {
   return (
     <Layout>
       <HeroSection />
       <TeamPreview />
+      <ClientsMarquee />
       <AboutPreview />
       <GalleryPreview />
       <FeaturedVideos />
